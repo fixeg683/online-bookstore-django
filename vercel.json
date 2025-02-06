@@ -2,11 +2,10 @@
     "version": 2,
     "builds": [
       {
-        "src": "bookshop/wsgi.py",
-        "use": "@vercel/python",
+        "src": "requirements.txt",
+        "use": "@vercel/static-build",
         "config": {
-          "maxLambdaSize": "15mb",
-          "runtime": "python3.12.8"
+          "distDir": "bookshop"
         }
       }
     ],
